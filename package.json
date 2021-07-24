@@ -17,7 +17,7 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage --collectCoverageFrom='src/**/*.js' --silent --ci --testLocationInResults --json --outputFile='report.json'",
     "lint": "prettier --check .",
     "format": "prettier --write ."
   },
