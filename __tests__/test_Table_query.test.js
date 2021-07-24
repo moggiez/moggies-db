@@ -1,4 +1,4 @@
-const { Table } = require("../db");
+const { Table } = require("../index");
 const { mockAWSLib, tableConfigs } = require("./helpers");
 const uuid = require("uuid");
 

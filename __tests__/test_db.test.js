@@ -1,4 +1,4 @@
-const { Table } = require("../db");
+const { Table } = require("../index");
 const { mockAWSLib } = require("./helpers");
 
 describe("Table", () => {
