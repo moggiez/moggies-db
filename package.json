@@ -1,0 +1,38 @@
+{
+  "name": "moggies-db",
+  "version": "0.2.0",
+  "private": false,
+  "keywords": [
+    "moggies.io",
+    "moggiez",
+    "moggies"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.0.5",
+    "prettier": "2.3.2",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "description": "Database utilities for moggies.io",
+  "main": "db.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moggiez/api.git"
+  },
+  "author": "Georgi Stavrev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moggiez/api/issues"
+  },
+  "homepage": "https://github.com/moggiez/api#readme",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "__tests__/helpers.js"
+    ]
+  }
+}
