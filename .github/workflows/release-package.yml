@@ -27,8 +27,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
+          scope: "@moggiez"
       - run: npm ci
-      - run: echo "" >> .npmrc && echo "${{secrets.GITHUB_TOKEN}}" >> .npmrc
-      - run: npm publish
+      - run: |
+          echo @moggiez:registry=https://npm.pkg.github.com/ >> .npmrc
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
