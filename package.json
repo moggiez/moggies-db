@@ -1,9 +1,9 @@
 {
-  "name": "moggies-db",
+  "name": "@moggiez/moggies-db",
   "version": "0.2.0",
   "private": false,
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/@moggiez"
   },
   "keywords": [
     "moggies.io",
