@@ -162,7 +162,7 @@ class Table {
 
         params.Item[this.config.hashKey] = hashKey;
         params.Item[this.config.sortKey] = sortKey;
-        params.ReturnValues = "ALL_OLD";
+        params.ReturnValues = "ALL_NEW";
         this.docClient.put(params, (err, data) => {
           if (err) {
             reject(err);

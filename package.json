@@ -1,6 +1,6 @@
 {
   "name": "@moggiez/moggies-db",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@moggiez"
@@ -18,8 +18,8 @@
   },
   "scripts": {
     "test": "jest --coverage --collectCoverageFrom='src/**/*.js' --silent --ci --testLocationInResults --json --outputFile='report.json'",
-    "lint": "prettier --check .",
-    "format": "prettier --write ."
+    "lint": "prettier --check ./*.js",
+    "format": "prettier --write ./*.js"
   },
   "description": "Database utilities for moggies.io",
   "main": "index.js",
