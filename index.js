@@ -176,6 +176,32 @@ class Table {
     });
   }
 
+  createAll = async ({ records }) => {
+    const params = {
+      RequestItems: {},
+    };
+    params.RequestItems[this.config.tableName] = [];
+
+    records.map((val) => {
+      const putRequest = {
+        PutRequest: {
+          Item: val,
+        },
+      };
+      params.RequestItems[this.config.tableName].push(putRequest);
+    });
+
+    return new Promise((resolve, reject) => {
+      this.docClient.batchWrite(params, (err, data) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(data);
+        }
+      });
+    });
+  };
+
   update({ hashKey, sortKey, updatedFields }) {
     const record = { ...updatedFields };
     const isVersionned = this.config.tableName.endsWith("_versions");
